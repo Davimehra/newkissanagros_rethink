@@ -93,18 +93,19 @@
         position: absolute;
         top: 2.5vh;
         left: 15vw;
-        font-size: var(--font-size-medium);
+        font-size: var(--font-size-medium-more);
+
         font-family: sora;
 
         color: #424242;
-        font-weight: 400;
+        font-weight: bold;
 
     }
 
     &>div[name=options-container] {
         position: absolute;
         right: 3vw;
-        top: 2vh;
+        top: 2.5vh;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -112,14 +113,14 @@
         gap: 5vw;
 
         &>label[name=home-link-label] {
-            font-size: var(--font-size-large-more);
+            font-size: var(--font-size-large-less);
             color: #00C853;
         }
 
         &>label[name=contact-link-label] {
             transition: 0.5s;
 
-            font-size: var(--font-size-medium-more);
+            font-size: var(--font-size-medium);
             color: #424242;
             box-shadow: 0px 0px 2px #757575;
             background: linear-gradient(120deg, #00C853, #CCFF90 50% 100%);
@@ -160,7 +161,7 @@
     &>img[name=main-wallpaper-img] {
         position: absolute;
 
-        top: 8vh;
+        top: 7vh;
         left: -30vw;
 
         height: 60vh;

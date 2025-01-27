@@ -19,10 +19,12 @@ import instagramLogo from '../assets/instagramLogo.webp'
 
 import { useEffect, useRef, useState } from "react";
 import { trustedCustomerCompanies } from "../data/customerCompany";
+import { serviceData } from "../data/serviceData";
 
 
 const HomePage_MobileView = () => {
     const [currentAgency, setCurrentAgency] = useState(trustedCustomerCompanies[0]);
+    const [currentServiceInfo, setCurrentServiceInfo] = useState(serviceData[0]);
     const customerCompanyRef = useRef(null);
 
     const secondPageRef = useRef(null);
@@ -154,6 +156,45 @@ const HomePage_MobileView = () => {
 
 
     }
+
+    const onClickNext_Service = ({ next = true, selectedId }) => {
+        return () => {
+            let currentIndex = 0;
+
+            serviceData?.forEach((service, index) => {
+                if (service?.id == currentServiceInfo?.id) {
+                    currentIndex = index;
+                }
+            });
+
+            if (selectedId) {
+                setCurrentServiceInfo(serviceData?.filter((currentService) => currentService?.id == selectedId)[0])
+            } else {
+                if (next) {
+                    const nextIndex = (currentIndex + 1) % serviceData?.length;
+                    setCurrentServiceInfo(serviceData[nextIndex]);
+                } else {
+                    if (currentIndex == 0) {
+                        const prevIndex = (serviceData?.length - 1) % serviceData?.length;
+                        setCurrentServiceInfo(serviceData[prevIndex]);
+                    } else {
+                        const prevIndex = (currentIndex - 1) % serviceData?.length;
+                        setCurrentServiceInfo(serviceData[prevIndex]);
+                    }
+
+                }
+            }
+
+
+            // refreshDiv(customerCompanyRef?.current?.querySelector("img[name=company-wallpaper]"));
+            // refreshDiv(customerCompanyRef?.current?.querySelector("label[name=company-service-label]"));
+            // refreshDiv(customerCompanyRef?.current?.querySelector("label[name=company-name-label]"));
+
+        }
+
+
+    }
+
     return (
         <div className={classNames(HomepageCss?.MainContainer)}>
             <div className={classNames(HomepageCss?.Header)}>
@@ -174,37 +215,31 @@ const HomePage_MobileView = () => {
                 <label name='heading-1-label'>{`Discover Your New\nAccessory`}</label>
 
                 <label name='heading-2-label'>{`A New Part\nof Life Style Waiting For YOU`}</label>
-
-
             </div>
 
             <div ref={secondPageRef} className={classNames(HomepageCss?.SecondPage)}>
                 <div name='relative'>
-                    <img name='hood-fiber-main-wallpaper' src={hoodFiberIcon}></img>
-                    <label name='fiber-hood-label'>{`Fiber-Hood`}</label>
 
                     <img name='product-img' src={hookIcon}></img>
                     <label name='service-heading-label'>{`Customize Your\nProduct`}</label>
                     <label name='service-defination'>{`At New Kissan Agros, we understand that every farming operation is unique, which is why we offer customizable tractor accessories tailored to your specific requirements. Whether you need attachments for increased efficiency, durability, or performance, I’m here to help you find the perfect solutions to elevate your agricultural productivity.`}</label>
 
-                    <div name='sliding-tabs'>
-                        <div >
-                            <img name='feature-img' src={toolIcon}></img>
-                            <label>{`Reliable Mechanics`}</label>
-                        </div>
-                        <div >
-                            <img name='feature-img' src={fabricIcon}></img>
-                            <label>{`Non-Ignoreable Varieties`}</label>
-                        </div>
-                        <div >
-                            <img name='feature-img' src={ironIcon}></img>
-                            <label>{`Build-To-Last Quality`}</label>
-                        </div>
-                        <div>
-                            <img name='feature-img' src={workerIcon}></img>
-                            <label>{`Highly Trained Workers`}</label>
-                        </div>
-                    </div>
+                    <img name='hood-fiber-main-wallpaper' src={hoodFiberIcon}></img>
+                    <label name='fiber-hood-label'>{`Fiber-Hood`}</label>
+                    <label name='service-heading-2-label'>{`All Time\nStock Availability`}</label>
+
+                    <label name='service-2-defination'>{`At our Tractor Accessory Build Shop, we pride ourselves on offering a comprehensive range of products to meet every farmer's need. Whether you’re looking for rugged attachments, durable tools, or specialized equipment, we’ve got it all in stock. Our commitment to quality means you can trust that each accessory is built to last, ensuring you get the most out of your tractor. Explore our extensive inventory today!`}</label>
+
+
+                    <label name='trusted-service-label'>{'Trusted Services'}</label>
+                    <img name='tool-main-wallpaper' src={currentServiceInfo?.image}></img>
+                    <label name='tool-label'>{currentServiceInfo?.serviceName}</label>
+                    <label name='service-heading-tool-label'>{currentServiceInfo?.Title}</label>
+
+                    <label name='service-tool-defination'>{currentServiceInfo?.description}</label>
+
+
+                    <div name='iteration-specifier'>{serviceData?.map((service) => <div key={service?.id} name={currentServiceInfo?.id == service?.id ? 'active' : ''} onClick={onClickNext_Service({ selectedId: service?.id })}>{''}</div>)}</div>
 
 
                 </div>

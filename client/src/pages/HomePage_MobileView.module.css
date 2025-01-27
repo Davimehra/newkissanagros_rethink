@@ -163,23 +163,23 @@
         top: 8vh;
         left: -30vw;
 
-        width: 100vh;
+        height: 60vh;
         aspect-ratio: inherit;
-        object-fit: scale-down;
+        object-fit: cover;
         object-position: top right;
-        filter: blur(0.02rem)
     }
 
     &>label[name=heading-1-label] {
         position: absolute;
         top: 10vh;
         right: 5vw;
-        font-size: 6vw;
+        font-size: 7vw;
+        line-height: 4vh;
 
         font-family: sora;
         white-space: pre-line;
         text-align: right;
-        color: #424242;
+        color: #FAFAFA;
 
 
     }
@@ -188,18 +188,18 @@
 
     &>label[name=heading-2-label] {
         position: absolute;
-        top: 20vh;
+        top: 18vh;
         right: 5vw;
         font-size: var(--font-size-large-more);
 
         font-family: sora;
         white-space: pre-line;
-        color: #757575;
+        color: #424242;
         line-height: 4vh;
         /* background-color: #212121; */
         padding: 1vw;
         box-sizing: border-box;
-        color: white;
+        line-height: 3vh;
         text-align: right;
         animation: slide-right-show 0.5s ease-in 0s forwards 1 reverse;
 

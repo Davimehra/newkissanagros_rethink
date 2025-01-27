@@ -171,9 +171,9 @@ const HomePage_MobileView = () => {
             <div className={classNames(HomepageCss?.FirstPage)}>
                 <img name='main-wallpaper-img' src={mainWallpaper}></img>
 
-                <label name='heading-1-label'>{`Discover\nYour New  Accessory`}</label>
+                <label name='heading-1-label'>{`Discover Your New\nAccessory`}</label>
 
-                <label name='heading-2-label'>{`A New Part of Life Style Waiting For YOU`}</label>
+                <label name='heading-2-label'>{`A New Part\nof Life Style Waiting For YOU`}</label>
 
 
             </div>

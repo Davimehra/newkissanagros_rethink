@@ -63,7 +63,7 @@
 .MainContainer {
     position: relative;
     width: 100vw;
-    height: 690vh;
+    height: 485vh;
     background-color: white;
 }
 
@@ -634,7 +634,7 @@
 
                 &>img[name=right-arrow] {
                     position: absolute;
-                    top: 24.5vh;
+                    top: 25vh;
                     right: 10vw;
                     width: 10vw;
                     aspect-ratio: inherit;
@@ -654,7 +654,7 @@
 
                 &>img[name=left-arrow] {
                     position: absolute;
-                    top: 24.5vh;
+                    top: 25vh;
                     left: 10vw;
                     width: 10vw;
                     aspect-ratio: inherit;
@@ -775,11 +775,13 @@
 
 .FourthPage_Product {
     --parent-width: 100vw;
-    --parent-height: 100vh;
+    --parent-height: 32vh;
     position: absolute;
-    top: 450vh;
+    top: 358vh;
     left: 0vw;
     overflow: hidden;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
 
 
     width: var(--parent-width);
@@ -790,50 +792,55 @@
         width: var(--parent-width);
         height: var(--parent-height);
 
+        &>label[name=heading-label] {
+            position: absolute;
+            top: 10vh;
+            right: -10vw;
+            font-size: 10vw;
+            font-family: sora;
+            color: #424242;
+            transform: rotateZ(90deg);
+
+            &::after {
+                position: absolute;
+                top: 6vh;
+                left: 0vw;
+                width: max-content;
+                content: "Tailored Layouts to Suit Every Lifestyle";
+                font-size: var(--font-size-large-more);
+                font-family: Arial, Helvetica, sans-serif;
+                color: #757575;
+
+            }
+        }
+
         &>div[name=product-showcase-div] {
             position: absolute;
             top: 0vh;
             left: 0vw;
-            padding-top: 20vh;
-            padding-left: 5vw;
-            padding-right: 5vw;
-            height: 100vh;
+            padding-top: 1vh;
+            padding-left: 3vw;
+            padding-right: 15vw;
+            height: 32vh;
             width: 100vw;
-            /* border-bottom: 1px solid grey; */
-
-            box-sizing: border-box;
-
-            &>label[name=heading-label] {
-                position: absolute;
-                top: 7vh;
-                left: 1vw;
-                font-size: var(--font-size-medium-more);
-                font-family: sora;
-                color: #424242;
-
-                &::after {
-                    position: absolute;
-                    top: 6vh;
-                    left: 0vw;
-                    width: max-content;
-                    content: "Tailored Layouts to Suit Every Lifestyle";
-                    font-size: var(--font-size-small-more);
-                    font-family: Arial, Helvetica, sans-serif;
-                    color: #757575;
-
-                }
-            }
+            box-shadow: inset 1px 0px 2px #BDBDBD;
 
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: flex-start;
-            gap:2vw;
+            gap: 2vw;
             row-gap: 1vh;
+            overflow-y: scroll;
+
+            box-sizing: border-box;
+
+
+
 
             &>div {
-                width: 20vw;
+                width: 30vw;
                 padding: 1vw;
                 aspect-ratio: 1;
                 position: relative;
@@ -845,17 +852,20 @@
                 border-radius: 1vh;
 
                 &>img {
-                    width: 18vw;
+                    width: 25vw;
                     aspect-ratio: inherit;
                 }
 
                 &>label {
                     position: absolute;
                     top: 1.5vh;
-                    right: 1vw;
+                    right: -1vw;
                     font-size: var(--font-size-medium-less);
                     font-family: Arial, Helvetica, sans-serif;
-                    color: #424242;
+                    color: white;
+                    background-color: #424242;
+                    padding: 1vw;
+
                 }
             }
         }
@@ -866,12 +876,13 @@
 
 .FifthPage_QueryForm {
     --parent-width: 100vw;
-    --parent-height: 100vh;
+    --parent-height: 80vh;
     position: absolute;
-    top: 550vh;
+    top: 390vh;
     left: 0vw;
     overflow: hidden;
     background-color: #F5F5F5;
+    /* border-bottom: 1px solid red; */
 
 
     width: var(--parent-width);
@@ -884,24 +895,24 @@
 
         &>label[name=Heading-label] {
             position: absolute;
-            top: 5vh;
+            top: 6vh;
             left: 5vw;
-            font-size: var(--font-size-large-less);
+            font-size: 6vw;
             font-family: sora;
             color: #212121;
         }
 
         &>label[name=Sub-Heading-label] {
             position: absolute;
-            top: 15vh;
-            left: 5vw;
-            font-size: var(--font-size-medium-less);
+            top: 6vh;
+            left: 50vw;
+            font-size: var(--font-size-medium-more);
             font-family: sora;
             color: #424242;
 
             &::after {
                 position: absolute;
-                top: 5vh;
+                top: 3vh;
                 left: 0vw;
                 width: 30vw;
                 content: 'Please submit your contact information and one of our sales associates will be in touch with you shortly';
@@ -914,11 +925,11 @@
 
         &>div[name=form-div] {
             position: absolute;
-            right: 1vw;
-            top: 10vh;
-            width: 40vw;
-            height: 80vh;
-            padding-top: 15vh;
+            left: 5vw;
+            top: 15vh;
+            width: 90vw;
+            height: 60vh;
+            padding-top: 12vh;
             padding-left: 2vw;
             padding-right: 2vw;
             background-color: white;
@@ -930,20 +941,21 @@
             align-items: flex-start;
             gap: 5vh;
             box-shadow: 0px 0px 3px #FAFAFA;
+            color: #424242;
 
             &>label[name=heading-label] {
                 position: absolute;
                 top: 2vh;
                 right: 2vw;
-                font-size: var(--font-size-medium);
+                font-size: var(--font-size-large-more);
                 font-family: sora;
                 color: #424242;
 
                 &::after {
                     position: absolute;
-                    top: 5vh;
+                    top: 3vh;
                     right: 0vw;
-                    font-size: var(--font-size-medium-less);
+                    font-size: var(--font-size-large);
                     content: 'Form';
                     font-family: Arial, Helvetica, sans-serif;
                     color: #757575;
@@ -958,14 +970,14 @@
                 gap: 2vh;
 
                 &>label {
-                    font-size: var(--font-size-small-more);
-                    font-weight: bold;
+                    font-size: var(--font-size-large-more);
+
                     font-family: sora;
                 }
 
                 &>input {
                     appearance: none;
-                    width: 27vw;
+                    width: 70vw;
                     border: none;
                     padding: 0.3vw 0.5vw;
                     padding-left: 0vw;
@@ -974,7 +986,7 @@
                     border-bottom: 1px solid grey;
                     box-sizing: border-box;
                     font-family: Arial, Helvetica, sans-serif;
-                    font-size: var(--font-size-small-more);
+                    font-size: var(--font-size-large-more);
                     outline: none;
                     color: #424242;
                 }
@@ -996,14 +1008,14 @@
                         &>input {
                             appearance: none;
                             background-color: white;
-                            width: 1.5vw;
-                            height: 1.5vw;
+                            width: 5vw;
+                            height: 5vw;
                             border-radius: 50%;
                             border: 1px solid grey;
                             cursor: pointer;
 
                             &:hover {
-                                background-color: #EEEEEE;
+                                background-color: #E0E0E0;
 
                             }
                         }
@@ -1023,11 +1035,11 @@
 
             &>label[name=submit-button] {
                 position: absolute;
-                bottom: 2vh;
+                bottom: 1vh;
                 right: 2vw;
-                width: 8vw;
-                height: 3vw;
-                border: 1px solid #757575;
+                width: 20vw;
+                height: 10vw;
+                border: 1px solid #9E9E9E;
                 border-radius: 1vh;
                 display: flex;
                 justify-content: center;
@@ -1035,9 +1047,11 @@
                 background-color: #00C853;
                 font-family: sora;
                 cursor: pointer;
+                color: #424242;
 
                 &:hover,
                 &:active {
+
                     background-color: #01af4a;
                 }
             }
@@ -1048,9 +1062,9 @@
 
 .Footer_Contact {
     --parent-width: 100vw;
-    --parent-height: 40vh;
+    --parent-height: 15vh;
     position: absolute;
-    top: 650vh;
+    top: 470vh;
     left: 0vw;
     overflow: hidden;
     background-color: #F5F5F5;
@@ -1067,37 +1081,37 @@
 
         &>img[name=newkissanagros-logo-img] {
             position: absolute;
-            top: 22vh;
-            left: 3vw;
-            width: 5vw;
+            top: -0.5vh;
+            left: 1vw;
+            width: 16vw;
             aspect-ratio: inherit;
         }
 
         &>label[name=company-name-label] {
             position: absolute;
-            top: 3vh;
-            left: 3vw;
+            top: 0.5vh;
+            left: 17vw;
             font-family: sora;
-            font-size: var(--font-size-medium-more);
+            font-size: var(--font-size-large-less);
             text-transform: uppercase;
         }
 
         &>label[name=company-address-label] {
             position: absolute;
-            top: 10vh;
-            left: 3vw;
+            top: 2.5vh;
+            left: 17vw;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: var(--font-size-small-more);
+            font-size: var(--font-size-medium-less);
             white-space: pre-line;
-            line-height: 3vh;
+            /* line-height: 3vh; */
         }
 
         &>label[name=privacy-link-label] {
             position: absolute;
-            bottom: 5vh;
+            bottom: 1vh;
             left: 3vw;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: var(--font-size-small-more);
+            font-size: var(--font-size-medium-less);
             cursor: pointer;
 
             &:hover,
@@ -1108,10 +1122,10 @@
 
         &>label[name=contact-us-label] {
             position: absolute;
-            bottom: 25vh;
-            right: 30vw;
+            bottom: 5vh;
+            right: 10vw;
             font-family: sora;
-            font-size: var(--font-size-medium-less);
+            font-size: var(--font-size-large-less);
             cursor: pointer;
 
             &:hover,
@@ -1124,18 +1138,18 @@
 
         &>img[name=gmail-logo] {
             position: absolute;
-            top: 20vh;
-            right: 35vw;
-            width: 2vw;
+            top: 11vh;
+            right: 20vw;
+            width: 5vw;
             aspect-ratio: inherit;
             cursor: pointer;
         }
 
         &>img[name=instagram-logo] {
             position: absolute;
-            top: 20.5vh;
-            right: 32vw;
-            width: 1.8vw;
+            top: 11.5vh;
+            right: 14vw;
+            width: 4vw;
             aspect-ratio: inherit;
             cursor: pointer;
 
@@ -1143,15 +1157,16 @@
 
         &>img[name=whatsapp-logo] {
             position: absolute;
-            top: 20.5vh;
-            right: 29vw;
-            width: 1.8vw;
+            top: 11.5vh;
+            right: 7vw;
+            width: 4.5vw;
             aspect-ratio: inherit;
             cursor: pointer;
 
         }
 
         &>label[name=creator] {
+            display: none;
             position: absolute;
             bottom: 10vh;
             right: 21vw;

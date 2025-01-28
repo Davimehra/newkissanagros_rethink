@@ -293,11 +293,16 @@ const HomePage_MobileView = () => {
 
             <div className={classNames(HomepageCss?.FourthPage_Product)}>
                 <div name='relative'>
+                    <label name='heading-label'>{`Products`}</label>
+
                     <div name='product-showcase-div'>
-                        <label name='heading-label'>{`Products`}</label>
                         <div>
                             <img src={drawbarIcon}></img>
                             <label>{`Drawbar`}</label>
+                        </div>
+                        <div>
+                            <img src={hoodTextileIcon}></img>
+                            <label>{`HOOD-TEXTILE`}</label>
                         </div>
                         <div>
                             <img src={hookIcon}></img>
@@ -307,7 +312,11 @@ const HomePage_MobileView = () => {
                             <img src={hoodFiberIcon}></img>
                             <label>{`HOOD FIBER`}</label>
                         </div>
+
                         <div>
+                            <img src={hoodTextileIcon}></img>
+                            <label>{`HOOD-TEXTILE`}</label>
+                        </div> <div>
                             <img src={hoodTextileIcon}></img>
                             <label>{`HOOD-TEXTILE`}</label>
                         </div>

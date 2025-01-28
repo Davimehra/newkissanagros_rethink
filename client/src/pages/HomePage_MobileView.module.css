@@ -601,10 +601,11 @@
             position: absolute;
             top: 126;
             left: 0vw;
-            height: 54vh;
+            padding-top: 4vh;
+            height: 64vh;
             width: 100vw;
-            display: none;
-            flex-direction: row;
+            display: flex;
+            flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             box-sizing: border-box;
@@ -613,14 +614,16 @@
 
             &>div[name=image-session] {
                 position: relative;
-                width: 60vw;
-                height: 50vh;
+                width: 90vw;
+                height: 29vh;
+                /* background-color: red; */
+                box-sizing: border-box;
 
                 &>img[name=company-wallpaper] {
                     position: absolute;
-                    top: 4vh;
-                    left: 10.5vw;
-                    width: 40vw;
+                    top: 0vh;
+                    left: 0vw;
+                    width: 90vw;
                     aspect-ratio: 16/9;
                     object-fit: cover;
                     border-radius: 2vh;
@@ -631,9 +634,9 @@
 
                 &>img[name=right-arrow] {
                     position: absolute;
-                    top: 18vh;
-                    right: 2vw;
-                    width: 5vw;
+                    top: 24.5vh;
+                    right: 10vw;
+                    width: 10vw;
                     aspect-ratio: inherit;
                     object-fit: cover;
                     border-radius: 2vh;
@@ -651,9 +654,9 @@
 
                 &>img[name=left-arrow] {
                     position: absolute;
-                    top: 18vh;
-                    left: 2vw;
-                    width: 5vw;
+                    top: 24.5vh;
+                    left: 10vw;
+                    width: 10vw;
                     aspect-ratio: inherit;
                     object-fit: cover;
                     border-radius: 2vh;
@@ -678,27 +681,28 @@
 
             &>div[name=information-session] {
                 position: relative;
-                width: 40vw;
-                height: 50vh;
+                width: 90vw;
+                height: 21vh;
+                /* background-color: green; */
 
                 &>label[name=heading-label] {
                     position: absolute;
-                    top: 5vh;
+                    top: 2vh;
                     left: 1vw;
                     font-family: sora;
-                    font-size: var(--font-size-medium-less);
+                    font-size: 4vw;
                     color: #424242;
-                    animation: highlight-text-to-medium-more 2s ease-in-out 0s forwards 1;
+                    animation: highlight-text-to-large-more 2s ease-in-out 0s forwards 1;
 
                 }
 
                 &>label[name=company-name-label] {
                     position: absolute;
-                    top: 10vh;
+                    top: 5vh;
                     left: 1vw;
                     width: max-content;
                     font-family: sora;
-                    font-size: var(--font-size-medium);
+                    font-size: 5vw;
                     color: #424242;
                     animation: show 1s linear 0s forwards 1;
 
@@ -707,12 +711,12 @@
 
                 &>label[name=company-service-label] {
                     position: absolute;
-                    top: 20vh;
+                    top: 9vh;
                     left: 1vw;
                     width: 90%;
                     font-family: Arial, Helvetica, sans-serif;
-                    font-size: var(--font-size-small-more);
-                    line-height: 3vh;
+                    font-size: var(--font-size-medium);
+                    line-height: 1.5vh;
                     text-align: justify;
                     color: #424242;
                     animation: show 1s linear 0s forwards 1;
@@ -731,10 +735,10 @@
                     gap: 1vw;
 
                     &>div {
-                        padding: 0.5vw;
+                        padding: 1vw;
 
                         border-radius: 50%;
-                        background-color: #FAFAFA;
+                        /* background-color: #FAFAFA; */
                         box-shadow: 0px 0px 5px grey;
                         box-sizing: border-box;
                         transition: 0.5s;
@@ -743,14 +747,14 @@
                         &:hover {
                             transition: 0.5s;
 
-                            box-shadow: 0px 0px 10px #0D47A1;
+                            box-shadow: 0px 0px 5px #0D47A1;
 
                         }
                     }
 
                     &>div[name=active] {
                         transition: 0.5s;
-                        box-shadow: 0px 0px 10px #0D47A1;
+                        box-shadow: 0px 0px 5px #0D47A1;
 
                     }
                 }
@@ -761,9 +765,9 @@
 
 }
 
-@keyframes highlight-text-to-medium-more {
+@keyframes highlight-text-to-large-more {
     50% {
-        font-size: var(--font-size-medium-more);
+        font-size: var(--font-size-large-more);
         font-weight: bold;
 
     }

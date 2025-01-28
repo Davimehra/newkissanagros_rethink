@@ -382,7 +382,7 @@ const HomePage_MobileView = () => {
                     <label name='company-name-label'>{`New Kissan Agros`}</label>
                     <label name='company-address-label'>{`NEAR TODARMAL GATE\nSIRHIND, PUNJAB\nINDIA 140406`}</label>
                     <label onClick={() => {
-                        navigate('/privacy-policy');
+                        navigate('/privacy-policy', { preventScrollReset: false });
                     }} name='privacy-link-label'>{`Privacy Policy`}</label>
                     <label name='contact-us-label'>{`Contact Us`}</label>
                     <img src={gmailLogo} name='gmail-logo'></img>

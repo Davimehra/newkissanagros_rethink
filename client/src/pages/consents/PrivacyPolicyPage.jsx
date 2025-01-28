@@ -2,16 +2,18 @@ import { isMobile } from "react-device-detect";
 import PrivacyPolicyPageCss from "./PrivacyPolicyPage.module.css";
 import classNames from "classnames";
 import NewKissanAgrosLogo from '../../assets/NewKissanAgrosLogo.png'
+import { useNavigate } from "react-router-dom";
 
 
 const PrivacyPolicyPage = () => {
+    const navigate = useNavigate();
     return (
         <div className={classNames(PrivacyPolicyPageCss?.MainContainer)}>
             <div className={classNames(PrivacyPolicyPageCss?.Header)}>
                 <img src={NewKissanAgrosLogo} name='newkissanagros-logo-img'></img>
                 <label name='company-name-label'>{`NEW KISSAN AGROS`}</label>
                 <div name='options-container'>
-                    <label name='home-link-label'>{`HOME`}</label>
+                    <label name='home-link-label' onClick={() => { navigate('/') }}>{`HOME`}</label>
                     <label name='contact-link-label' onClick={() => {
                         document?.body?.querySelector('#in-touch')?.scrollIntoView();
                     }}>{`Get In Touch`}</label>

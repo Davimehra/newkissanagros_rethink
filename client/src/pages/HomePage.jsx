@@ -19,9 +19,11 @@ import instagramLogo from '../assets/instagramLogo.webp'
 
 import { useEffect, useRef, useState } from "react";
 import { trustedCustomerCompanies } from "../data/customerCompany";
+import { useNavigate } from "react-router-dom";
 
 
 const HomePage = () => {
+    const navigate = useNavigate();
     const [currentAgency, setCurrentAgency] = useState(trustedCustomerCompanies[0]);
     const customerCompanyRef = useRef(null);
 
@@ -315,7 +317,9 @@ const HomePage = () => {
 
                     <label name='company-name-label'>{`New Kissan Agros`}</label>
                     <label name='company-address-label'>{`NEAR TODARMAL GATE\nSIRHIND, PUNJAB\nINDIA 140406`}</label>
-                    <label name='privacy-link-label'>{`Privacy Policy`}</label>
+                    <label name='privacy-link-label' onClick={() => {
+                        navigate('/privacy-policy', { preventScrollReset: false });
+                    }}>{`Privacy Policy`}</label>
                     <label name='contact-us-label'>{`Contact Us`}</label>
                     <img src={gmailLogo} name='gmail-logo'></img>
                     <img src={whatsappLogo} name='whatsapp-logo'></img>

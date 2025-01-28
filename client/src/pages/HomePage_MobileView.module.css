@@ -155,7 +155,7 @@
     animation-delay: 0s;
     animation-iteration-count: 1;
     overflow: hidden;
-    background-color: red;
+    /* background-color: red; */
 
 
     &>img[name=main-wallpaper-img] {
@@ -210,7 +210,7 @@
 
 .SecondPage {
     --parent-width: 100vw;
-    --parent-height: 200vh;
+    --parent-height: 120vh;
     position: absolute;
     top: 58vh;
     left: 0vw;
@@ -218,7 +218,6 @@
 
     width: var(--parent-width);
     height: var(--parent-height);
-    border: 1px solid red;
     box-sizing: border-box;
 
     &>div[name='relative'] {
@@ -229,17 +228,35 @@
         &>img[name=product-img] {
             /* display: none; */
             position: absolute;
-            right: 1vw;
+            right: 5vw;
             top: 2vh;
-            width: 40vw;
+            width: 35vw;
+            padding-left: 5vw;
             aspect-ratio: inherit;
             filter: hue-rotate(30deg);
-
+            background-color: #EEEEEE;
+            border-radius: 1vh;
             opacity: 0%;
             animation: slide-left-show 0.5s ease-in 0s reverse 1 forwards, show 0.5s ease-in forwards 1 alternate;
 
 
         }
+
+        &>label[name=product-name-label] {
+            display: block;
+            position: absolute;
+            top: 6vh;
+            right: 26vw;
+            padding: 0.5vw;
+            width: 25vw;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #212121;
+            color: #FAFAFA;
+            transition: 0.5s;
+            transform: rotateZ(90deg);
+        }
+
 
 
         &>label[name=service-heading-label] {
@@ -353,15 +370,15 @@
             height: 25vh;
             padding: 1vw;
             aspect-ratio: 16/9;
-            filter: drop-shadow(0px 0px 0px #212121);
+            filter: drop-shadow(0px 0px 3px #BDBDBD);
 
             opacity: 0%;
             animation-delay: 0s;
             box-sizing: border-box;
             border-radius: 1vh;
             transition: 0.5s;
-            background-color: #BDBDBD;
-            animation: show 0.5s ease-out forwards 1 alternate;
+            /* background-color: #EEEEEE; */
+            animation: slide-right-show 0.5s ease-in 0s reverse 1 forwards, show 0.5s ease-in forwards 1 alternate;
 
 
 
@@ -388,7 +405,7 @@
         &>label[name=sub-service-name-label] {
             display: block;
             position: absolute;
-            top: 93vh;
+            top: 94vh;
             left: 4.5vw;
             padding: 1.2vw;
             font-size: 3.5vw;
@@ -399,7 +416,7 @@
             border-bottom-right-radius: 1vh;
             color: #FAFAFA;
             transition: 0.5s;
-            animation: show 0.5s ease-out forwards 1 alternate;
+            animation: show 1s ease-out forwards 1 alternate;
 
         }
 
@@ -485,7 +502,7 @@
     --parent-width: 100vw;
     --parent-height: 180vh;
     position: absolute;
-    top: 270vh;
+    top: 178vh;
     left: 0vw;
     overflow: hidden;
     /* background-color: green; */
@@ -509,18 +526,21 @@
 
             &>img[name=owner-wallpaper-img] {
                 position: relative;
+                height: 126vh;
                 width: 100vw;
-                aspect-ratio: inherit;
+                object-fit: cover;
+                object-position: bottom center;
                 filter: contrast(50%);
+                overflow: hidden;
 
             }
 
             &>label[name=company-owner-label] {
                 position: absolute;
-                top: 20vh;
+                top: 15vh;
                 left: 5vw;
                 white-space: pre-line;
-                font-size: var(--font-size-small-more);
+                font-size: 5vw;
                 line-height: 4vh;
                 letter-spacing: 0.1vw;
                 font-family: sora;
@@ -533,7 +553,7 @@
                     left: 0vw;
                     width: max-content;
                     content: 'Company Visionors';
-                    font-size: var(--font-size-medium-more);
+                    font-size: 7vw;
                     color: #212121;
 
                 }
@@ -543,20 +563,21 @@
                 font-family: Arial, Helvetica, sans-serif;
 
                 position: absolute;
-                top: 10vh;
-                right: 5vw;
-                width: 35vw;
+                top: 30vh;
+                left: 5vw;
+                width: 60vw;
                 padding: 2vw;
                 white-space: pre-line;
-                font-size: var(--font-size-small-more);
+                font-size: var(--font-size-large-more);
                 line-height: 3vh;
+                text-align: justify;
 
-                color: black;
+                color: #424242;
                 box-sizing: border-box;
                 background-color: transparent;
                 transition: 0.5s;
                 /* background-color: #BDBDBD; */
-                box-shadow: 0px 0px 5px grey;
+                /* box-shadow: 0px 0px 5px grey; */
 
 
 

@@ -239,11 +239,13 @@ const HomePage_MobileView = () => {
                 <div name='relative'>
 
                     <img name='product-img' src={hookIcon}></img>
+                    <label name='product-name-label'>{`HOOK`}</label>
+
                     <label name='service-heading-label'>{`Customize Your\nProduct`}</label>
                     <label name='service-defination'>{`At New Kissan Agros, we understand that every farming operation is unique, which is why we offer customizable tractor accessories tailored to your specific requirements. Whether you need attachments for increased efficiency, durability, or performance, I’m here to help you find the perfect solutions to elevate your agricultural productivity.`}</label>
 
                     <img name='hood-fiber-main-wallpaper' src={hoodFiberIcon}></img>
-                    <label name='fiber-hood-label'>{`Fiber-Hood`}</label>
+                    <label name='fiber-hood-label'>{`HOOD`}</label>
                     <label name='service-heading-2-label'>{`All Time\nStock Availability`}</label>
 
                     <label name='service-2-defination'>{`At our Tractor Accessory Build Shop, we pride ourselves on offering a comprehensive range of products to meet every farmer's need. Whether you’re looking for rugged attachments, durable tools, or specialized equipment, we’ve got it all in stock. Our commitment to quality means you can trust that each accessory is built to last, ensuring you get the most out of your tractor. Explore our extensive inventory today!`}</label>

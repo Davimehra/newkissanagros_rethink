@@ -166,6 +166,7 @@
         aspect-ratio: inherit;
         object-fit: cover;
         object-position: top right;
+        filter: contrast(80%)
     }
 
     &>label[name=heading-1-label] {

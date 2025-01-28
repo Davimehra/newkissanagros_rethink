@@ -35,6 +35,23 @@ const HomePage_MobileView = () => {
     const [screenCoveredPer, setScreenCoveredPer] = useState(0);
     const [scrolling, setScrolling] = useState(null);
 
+    let serviceWallpaperTimeout = null;
+    const serviceWallpaperTimmer = 10000;
+    useEffect(() => {
+        (() => {
+            serviceWallpaperTimeout = setInterval(() => {
+                onClickNext_Service({ next: true })();
+                console?.log("Changed")
+            }, serviceWallpaperTimmer)
+        })()
+
+        return () => {
+            if (serviceWallpaperTimeout) {
+                clearInterval(serviceWallpaperTimeout)
+            }
+        }
+    }, [currentServiceInfo])
+
 
     useEffect(() => {
         window?.addEventListener("scroll", (event) => {
@@ -186,9 +203,10 @@ const HomePage_MobileView = () => {
             }
 
 
-            // refreshDiv(customerCompanyRef?.current?.querySelector("img[name=company-wallpaper]"));
-            // refreshDiv(customerCompanyRef?.current?.querySelector("label[name=company-service-label]"));
-            // refreshDiv(customerCompanyRef?.current?.querySelector("label[name=company-name-label]"));
+            refreshDiv(secondPageRef?.current?.querySelector("img[name=sub-service-wallpaper]"));
+            refreshDiv(secondPageRef?.current?.querySelector("label[name=sub-service-name-label]"));
+            refreshDiv(secondPageRef?.current?.querySelector("label[name=sub-service-title-label]"));
+            refreshDiv(secondPageRef?.current?.querySelector("label[name=sub-service-defination]"));
 
         }
 
@@ -232,11 +250,11 @@ const HomePage_MobileView = () => {
 
 
                     <label name='trusted-service-label'>{'Trusted Services'}</label>
-                    <img name='tool-main-wallpaper' src={currentServiceInfo?.image}></img>
-                    <label name='tool-label'>{currentServiceInfo?.serviceName}</label>
-                    <label name='service-heading-tool-label'>{currentServiceInfo?.Title}</label>
+                    <img name='sub-service-wallpaper' src={currentServiceInfo?.image}></img>
+                    <label name='sub-service-name-label'>{currentServiceInfo?.serviceName}</label>
+                    <label name='sub-service-title-label'>{currentServiceInfo?.Title}</label>
 
-                    <label name='service-tool-defination'>{currentServiceInfo?.description}</label>
+                    <label name='sub-service-defination'>{currentServiceInfo?.description}</label>
 
 
                     <div name='iteration-specifier'>{serviceData?.map((service) => <div key={service?.id} name={currentServiceInfo?.id == service?.id ? 'active' : ''} onClick={onClickNext_Service({ selectedId: service?.id })}>{''}</div>)}</div>

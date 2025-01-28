@@ -263,7 +263,7 @@
             left: 5vw;
             top: 22vh;
             width: 90vw;
-            font-size: var(--font-size-medium);
+            font-size: var(--font-size-medium-more);
             white-space: pre-line;
             text-align: justify;
             color: #757575;
@@ -333,7 +333,7 @@
             left: 5vw;
             top: 54vh;
             width: 90vw;
-            font-size: var(--font-size-medium);
+            font-size: var(--font-size-medium-more);
             white-space: pre-line;
             text-align: justify;
             color: #757575;
@@ -345,83 +345,86 @@
 
         }
 
-        &>img[name=tool-main-wallpaper] {
+        &>img[name=sub-service-wallpaper] {
             /* display: block; */
             position: absolute;
             top: 75vh;
-            left: 5vw;
-            height: 40vw;
+            left: 3.5vw;
+            height: 25vh;
             padding: 1vw;
             aspect-ratio: 16/9;
             filter: drop-shadow(0px 0px 0px #212121);
 
             opacity: 0%;
-            animation: show 1s ease-in forwards 1 alternate;
             animation-delay: 0s;
             box-sizing: border-box;
             border-radius: 1vh;
             transition: 0.5s;
-            background-color: #212121;
+            background-color: #BDBDBD;
+            animation: show 0.5s ease-out forwards 1 alternate;
+
 
 
         }
 
         &>label[name=trusted-service-label] {
-            display: block;
+            display: none;
             position: absolute;
-            top: 83vh;
+            top: 70vh;
             right: 5.1vw;
             padding: 1.2vw;
             font-size: 3.5vw;
             width: max-content;
             box-sizing: border-box;
             text-align: center;
-            background-color: #616161;
+            /* background-color: #616161; */
             /* border-bottom-right-radius: 1vh;
             border-bottom-left-radius: 1vh; */
-            color: #FAFAFA;
+            color: #424242;
             transition: 0.5s;
-            transform: rotateZ(90deg);
+            /* transform: rotateZ(90deg); */
         }
 
-        &>label[name=tool-label] {
+        &>label[name=sub-service-name-label] {
             display: block;
             position: absolute;
-            top: 87vh;
-            left: 5.1vw;
+            top: 93vh;
+            left: 4.5vw;
             padding: 1.2vw;
             font-size: 3.5vw;
             width: max-content;
             box-sizing: border-box;
             text-align: center;
-            background-color: #212121;
+            background-color: #BDBDBD;
             border-bottom-right-radius: 1vh;
             color: #FAFAFA;
             transition: 0.5s;
+            animation: show 0.5s ease-out forwards 1 alternate;
+
         }
 
-        &>label[name=service-heading-tool-label] {
+        &>label[name=sub-service-title-label] {
             /* display: none; */
             position: absolute;
             right: 4vw;
-            top: 96vh;
+            top: 69vh;
             font-size: 3.5vw;
             white-space: pre-line;
             color: #212121;
             opacity: 0%;
             text-align: left;
 
-            animation: slide-up-show 1s ease-in 0s reverse 1 forwards, show 0.5s ease-in forwards 1 alternate;
+            animation: show 0.5s ease-out forwards 1 alternate;
 
         }
 
-        &>label[name=service-tool-defination] {
+        &>label[name=sub-service-defination] {
             /* display: none; */
             position: absolute;
             left: 5vw;
-            top: 102vh;
+            top: 104vh;
             width: 90vw;
-            font-size: var(--font-size-medium);
+            font-size: var(--font-size-medium-more);
             white-space: pre-line;
             text-align: justify;
             color: #757575;
@@ -429,42 +432,44 @@
             font-family: sora;
             line-height: 2vh;
 
-            animation: show 1s ease-in 0s forwards 1 alternate;
+            animation: show 0.5s ease-out forwards 1 alternate;
 
         }
 
 
         &>div[name=iteration-specifier] {
             position: absolute;
-            top: 97vh;
-            left: 5vw;
+            top: 101vh;
+            right: 5vw;
 
             display: flex;
             flex: row;
             justify-content: flex-start;
             align-items: center;
-            gap: 1vw;
+            gap: 2vw;
+            animation: show 0.5s ease-out forwards 1 alternate;
 
             &>div {
-                padding: 1vw;
+                padding: 1.5vw;
 
                 border-radius: 50%;
-                background-color: #FAFAFA;
-                box-shadow: 0px 0px 5px grey;
+                background-color: transparent;
+                box-shadow: 0px 0px 5px #BDBDBD;
                 box-sizing: border-box;
-                transition: 0.5s;
+                transition: 0.1s;
                 cursor: pointer;
 
-                &:hover {
-                    transition: 0.5s;
+                &:hover,
+                &:active {
+                    transition: 0.1s;
 
-                    box-shadow: 0px 0px 3px #0D47A1;
+                    box-shadow: 0px 0px 5px #0D47A1;
 
                 }
             }
 
             &>div[name=active] {
-                transition: 0.5s;
+                transition: 0.1s;
                 box-shadow: 0px 0px 3px #0D47A1;
 
             }

@@ -84,20 +84,20 @@
     &>img[name=newkissanagros-logo-img] {
         position: absolute;
         top: 1vh;
-        left: 2vh;
-        width: 10vw;
+        right: 2vh;
+        width: 15vw;
         aspect-ratio: inherit;
     }
 
     &>label[name=company-name-label] {
         position: absolute;
-        top: 2.5vh;
-        left: 15vw;
-        font-size: var(--font-size-medium-more);
+        top: 3vh;
+        left: 5vw;
+        font-size: var(--font-size-large-more);
 
         font-family: sora;
 
-        color: #424242;
+        color: #616161;
         font-weight: bold;
 
     }
@@ -106,7 +106,7 @@
         position: absolute;
         right: 3vw;
         top: 2.5vh;
-        display: flex;
+        display: none;
         flex-direction: row;
         justify-content: center;
         align-items: center;

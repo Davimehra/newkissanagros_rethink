@@ -218,8 +218,8 @@ const HomePage_MobileView = () => {
     return (
         <div className={classNames(HomepageCss?.MainContainer)}>
             <div className={classNames(HomepageCss?.Header)}>
-                <img src={NewKissanAgrosLogo} name='newkissanagros-logo-img'></img>
-                <label name='company-name-label'>{`NEW KISSAN AGROS`}</label>
+                <img src={NewKissanAgrosLogo} alt="new kissan agros logo" name='newkissanagros-logo-img'></img>
+                <h1 name='company-name-label'>{`NEW KISSAN AGROS`}</h1>
                 <div name='options-container'>
                     <label name='home-link-label'>{`HOME`}</label>
                     <label name='contact-link-label' onClick={() => {
@@ -230,7 +230,7 @@ const HomePage_MobileView = () => {
             </div>
 
             <div className={classNames(HomepageCss?.FirstPage)}>
-                <img name='main-wallpaper-img' src={mainWallpaper}></img>
+                <img name='main-wallpaper-img' alt="new kissan agro wallpaper" src={mainWallpaper}></img>
 
                 <label name='heading-1-label'>{`Discover Your New\nAccessory`}</label>
 
@@ -240,13 +240,13 @@ const HomePage_MobileView = () => {
             <div ref={secondPageRef} className={classNames(HomepageCss?.SecondPage)}>
                 <div name='relative'>
 
-                    <img name='product-img' src={hookIcon}></img>
+                    <img name='product-img' alt='tractor hook' src={hookIcon}></img>
                     <label name='product-name-label'>{`HOOK`}</label>
 
                     <label name='service-heading-label'>{`Customize Your\nProduct`}</label>
                     <label name='service-defination'>{`At New Kissan Agros, we understand that every farming operation is unique, which is why we offer customizable tractor accessories tailored to your specific requirements. Whether you need attachments for increased efficiency, durability, or performance, I’m here to help you find the perfect solutions to elevate your agricultural productivity.`}</label>
 
-                    <img name='hood-fiber-main-wallpaper' src={hoodFiberIcon}></img>
+                    <img name='hood-fiber-main-wallpaper' alt="tractor hood" src={hoodFiberIcon}></img>
                     <label name='fiber-hood-label'>{`HOOD`}</label>
                     <label name='service-heading-2-label'>{`All Time\nStock Availability`}</label>
 
@@ -254,7 +254,7 @@ const HomePage_MobileView = () => {
 
 
                     <label name='trusted-service-label'>{'Trusted Services'}</label>
-                    <img name='sub-service-wallpaper' src={currentServiceInfo?.image}></img>
+                    <img name='sub-service-wallpaper' alt="new kissan agros service" src={currentServiceInfo?.image}></img>
                     <label name='sub-service-name-label'>{currentServiceInfo?.serviceName}</label>
                     <label name='sub-service-title-label'>{currentServiceInfo?.Title}</label>
 

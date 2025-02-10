@@ -87,7 +87,7 @@
         aspect-ratio: inherit;
     }
 
-    &>label[name=company-name-label] {
+    &>h1[name=company-name-label] {
         position: absolute;
         top: 4vh;
         left: 5vw;

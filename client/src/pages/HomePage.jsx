@@ -159,8 +159,8 @@ const HomePage = () => {
     return (
         <div className={classNames(HomepageCss?.MainContainer)}>
             <div className={classNames(HomepageCss?.Header)}>
-                <img src={NewKissanAgrosLogo} name='newkissanagros-logo-img'></img>
-                <label name='company-name-label'>{`NEW KISSAN AGROS`}</label>
+                <img src={NewKissanAgrosLogo} alt="new kissan agros logo" name='newkissanagros-logo-img'></img>
+                <h1 name='company-name-label'>{`NEW KISSAN AGROS`}</h1>
                 <div name='options-container'>
                     <label name='home-link-label'>{`HOME`}</label>
                     <label name='contact-link-label' onClick={() => {
@@ -171,7 +171,7 @@ const HomePage = () => {
             </div>
 
             <div className={classNames(HomepageCss?.FirstPage)}>
-                <img name='main-wallpaper-img' src={mainWallpaper}></img>
+                <img name='main-wallpaper-img' alt="new kissan agro wallpaper" src={mainWallpaper}></img>
 
                 <label name='heading-1-label'>{`Discover Your\nNew  Accessory`}</label>
 
@@ -182,28 +182,28 @@ const HomePage = () => {
 
             <div ref={secondPageRef} className={classNames(HomepageCss?.SecondPage)}>
                 <div name='relative'>
-                    <img name='hood-fiber-main-wallpaper' src={hoodFiberIcon}></img>
+                    <img name='hood-fiber-main-wallpaper' alt="tractor hood" src={hoodFiberIcon}></img>
                     <label name='fiber-hood-label'>{`Fiber-Hood`}</label>
 
-                    <img name='product-img' src={hookIcon}></img>
+                    <img name='product-img' alt="tractor hook" src={hookIcon}></img>
                     <label name='service-heading-label'>{`Customize Your\nProduct`}</label>
                     <label name='service-defination'>{`At New Kissan Agros, we understand that every farming operation is unique, which is why we offer customizable tractor accessories tailored to your specific requirements. Whether you need attachments for increased efficiency, durability, or performance, I’m here to help you find the perfect solutions to elevate your agricultural productivity.`}</label>
 
                     <div name='sliding-tabs'>
                         <div >
-                            <img name='feature-img' src={toolIcon}></img>
+                            <img name='feature-img' alt="new kissan agros mechanics" src={toolIcon}></img>
                             <label>{`Reliable Mechanics`}</label>
                         </div>
                         <div >
-                            <img name='feature-img' src={fabricIcon}></img>
+                            <img name='feature-img' alt="new kissan agros cloths" src={fabricIcon}></img>
                             <label>{`Non-Ignoreable Varieties`}</label>
                         </div>
                         <div >
-                            <img name='feature-img' src={ironIcon}></img>
+                            <img name='feature-img' alt="new kissan agros build quality" src={ironIcon}></img>
                             <label>{`Build-To-Last Quality`}</label>
                         </div>
                         <div>
-                            <img name='feature-img' src={workerIcon}></img>
+                            <img name='feature-img' alt="new kissan agros workers" src={workerIcon}></img>
                             <label>{`Highly Trained Workers`}</label>
                         </div>
                     </div>

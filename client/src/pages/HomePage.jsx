@@ -215,7 +215,7 @@ const HomePage = () => {
             <div className={classNames(HomepageCss?.ThirdPage)}>
                 <div name='relative'>
                     <div name='owner-showcase-div'>
-                        <img name='owner-wallpaper-img' src={ownerWallpaper}></img>
+                        {/* <img name='owner-wallpaper-img' src={ownerWallpaper}></img> */}
                         <label name='company-owner-label'>{`Visionary Product\nby Rajesh, Ramesh, Puran Chand`}</label>
                         <label name='company-owner-moto-label'>{`Discover the future of agriculture with New Kissan Agros! We're dedicated to creating innovative tractor accessories that meet the evolving demands of modern farming. Upgrade your tractor today and experience the difference our thoughtful designs can make.`}</label>
                         <img name='company-logo-img' src={NewKissanAgrosLogo}></img>

@@ -63,7 +63,7 @@
 .MainContainer {
     position: relative;
     width: 100vw;
-    height: 690vh;
+    height: 590vh;
     background-color: white;
 }
 
@@ -403,9 +403,9 @@
             position: relative;
             top: 0vh;
             width: 100vw;
-            height: 126vh;
+            height: 50vh;
             overflow-y: hidden;
-            background-color: #424242;
+            background-color: #E0E0E0;
 
 
             &>img[name=owner-wallpaper-img] {
@@ -652,7 +652,7 @@
     --parent-width: 100vw;
     --parent-height: 100vh;
     position: absolute;
-    top: 450vh;
+    top: 400vh;
     left: 0vw;
     overflow: hidden;
 
@@ -743,7 +743,7 @@
     --parent-width: 100vw;
     --parent-height: 100vh;
     position: absolute;
-    top: 550vh;
+    top: 500vh;
     left: 0vw;
     overflow: hidden;
     background-color: #F5F5F5;
@@ -925,7 +925,7 @@
     --parent-width: 100vw;
     --parent-height: 40vh;
     position: absolute;
-    top: 650vh;
+    top: 600vh;
     left: 0vw;
     overflow: hidden;
     background-color: #F5F5F5;
